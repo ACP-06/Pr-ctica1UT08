@@ -6,14 +6,15 @@
 public class CalculadoraFactura {
 
     public static void calcular(double pb, double d) {
-        double i = 21.0; // porcentaje de impuesto fijo
+        double porcentajeImpuestoFijo = 21.0; // porcentaje de impuesto fijo
+        double precioBase = 120.0;
+        double descuento = 15.0;
+        double precioNeto = pb - (pb * d / 100);
+        double facturaTotal = p + (p * i / 100);
 
-        double p = pb - (pb * d / 100);
-        double t = p + (p * i / 100);
-
-        System.out.println("El precio base es: " + pb);
-        System.out.println("Descuento aplicado: " + d + "%");
-        System.out.println("Impuesto aplicado: " + i + "%");
-        System.out.println("El total a pagar es: " + t);
+        System.out.println("El precio base es: " + precioBase);
+        System.out.println("Descuento aplicado: " + descuento + "%");
+        System.out.println("Impuesto aplicado: " + porcentajeImpuestoFijo + "%");
+        System.out.println("El total a pagar es: " + facturaTotal);
     }
 }
