@@ -10,7 +10,7 @@ public class CalculadoraFactura {
         double precioBase = 120.0;
         double descuento = 15.0;
         double precioNeto = precioBase  - descuentoRealizado(120.0, 15.0);
-        double facturaTotal = precioNeto + impuestoAplicado(double a, 21.0);
+        double facturaTotal = precioNeto + impuestoAplicado(precioBase  - descuentoRealizado(120.0, 15.0), 21.0);
     
         mostrarConsola();
         
