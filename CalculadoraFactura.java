@@ -9,8 +9,8 @@ public class CalculadoraFactura {
         double porcentajeImpuestoFijo = 21.0; // porcentaje de impuesto fijo
         double precioBase = 120.0;
         double descuento = 15.0;
-        double precioNeto = precioBase  - (precioBase * descuento/ 100);
-        double facturaTotal = precioNeto + (precioNeto * porcentajeImpuestoFijo / 100);
+        double precioNeto = precioBase  - descuentoRealizado(120.0, 15.0);
+        double facturaTotal = precioNeto + impuestoAplicado(double a, 21.0);
     
         mostrarConsola();
         
@@ -20,5 +20,13 @@ public class CalculadoraFactura {
         System.out.println("Descuento aplicado: " + descuento + "%");
         System.out.println("Impuesto aplicado: " + porcentajeImpuestoFijo + "%");
         System.out.println("El total a pagar es: " + facturaTotal);
+    
+    }
+
+    public static double descuentoRealizado(double a, double b){
+            return a * b/100;
+    }
+     public static double impuestoAplicado(double a, double b){
+            return a * b/100;
     }
 }
